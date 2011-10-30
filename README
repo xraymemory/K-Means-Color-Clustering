@@ -1,0 +1,47 @@
+K-MEANS COLOR CLUSTERING
+
+##################
+What is K-Means?
+#################
+
+K-means is an algorithm that is used in many different problem domains. It works
+by creating centroids, or clusters, that hold specific values - whether RGB
+color values or an arbitrary size threshold - and then assigning data points
+to clusters based some distance measurement. For instance, in this program,
+the user selects four clusters by clicking on points in the window. The RGB and
+XY values of the selected point become the cluster values. Then, by iterating
+through every pixel in the image, we can check which pixels belong to which
+cluters using a Euclidean distance metric. This process is run until all
+pixels have been normalized into a cluster, resulting in a posterizing type
+effect. 
+
+Although this a rudimentary application of K-means, it can still be used
+to develop powerful and interesting programs. My next project is focused on 
+using K-means to transform photographs into sprite images reminscient of
+vintage video games. In that case, the centroids will be composed of the color
+values for specific templates (Commodore 64, Atari 2600, NES, etc).
+
+#######################
+How to use this program
+#######################
+
+NOTE: YOU MUST HAVE JAVA AND PROCESSING INSTALLED TO RUN THIS PROGRAM
+
+This program only works for Mac and PC currently. If you really want to run 
+it on a GNU/Linux system, you need to install the GSVideo library and import
+it in the processing code (import GSVideo.*) and then switch the Capture()
+statements to the appropiate GSVideo funtion. 
+
+Using the program is simple: if you have a webcam installed, simply open
+kmeans.pde in Processing and hit the "run" button. Then select four points
+and watch the algorithm go to work! 'r' and 'y' buttons on the keyboard 
+swtich between RGB and YUV color spaces respectively. To reset the image
+and select new clusters, press the 'n' key.
+
+If you DO NOT HAVE A WEBCAM, you can still use the program but only a static
+image file. Open kmeans.pde in your editor of choice, comment out lines
+13, 14, 47, 58, and 68-70. Uncomment line 46 and change "test.jpg" to the name
+of whatever file you want to use. Store this file in a folder called "data"
+in your kmeans directory. Run the program as usual. 
+
+
